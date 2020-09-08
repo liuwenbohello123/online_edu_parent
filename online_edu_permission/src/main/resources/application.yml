@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: EDU-PERMISSION
+  datasource:
+    username: root
+    password: "0920"
+    url: jdbc:mysql://127.0.0.1:3306/permission?serverTimezone=GMT%2B8&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    driver-class-name: com.mysql.jdbc.Driver
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  redis:
+    host: 39.106.94.208
+    port: 6379
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka/
+server:
+  port: 8005
+swagger2:
+  enable: true
+mybatis-plus:
+  mapper-locations: classpath:com/atguigu/acl/mapper/xml/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
